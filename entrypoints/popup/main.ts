@@ -30,3 +30,7 @@ const redirectButton = document.getElementById(
   "libproxy-redirect",
 ) as HTMLAnchorElement;
 redirectButton.href = toLibProxyUrl(currentUrl);
+redirectButton.addEventListener("click", (e) => {
+  e.preventDefault();
+  browser.tabs.update({ url: redirectButton.href });
+});
