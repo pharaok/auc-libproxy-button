@@ -21,10 +21,8 @@ export default defineContentScript({
       });
     if (URLs.some((u) => (domain + path).startsWith(u))) {
       const a = document.createElement("a");
-      setupLibProxyButton(
-        a,
-        `https://${domain.replace(/\./g, "-")}.libproxy.aucegypt.edu${path}`,
-      );
+      setupLibProxyButton(a, toLibProxyUrl(window.location.href));
+      console.log(a);
       document.body.appendChild(a);
     }
   },

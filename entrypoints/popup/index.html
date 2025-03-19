@@ -1,13 +1,31 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Default Popup Title</title>
     <meta name="manifest.type" content="browser_action" />
-  </head>
-  <body>
-    <div id="app"></div>
+</head>
+
+<body>
+    <div id="ap" class="bg-blue display-center flex flex-col items-center gap-2 p-4 text-white">
+        <i data-si="openaccess" class="w-24"></i>
+        <h1 class="text-lg font-black">AUC LibProxy Redirect</h1>
+        <a id="libproxy-redirect"
+            class="text-blue rounded-md bg-white p-2 text-xl font-bold transition hover:bg-white/75">Access through AUC
+            Library</a>
+        <div class="mt-2 flex divide-x-2 border-white *:px-2 [&_a]:hover:text-white/75">
+            <p>Made by Farouk</p>
+            <a href="mailto:farouktamer@aucegypt.edu">
+                <i data-lucide="mail"></i>
+            </a>
+            <a href="https://github.com/pharaok" class="w-10">
+                <i data-si="github"></i>
+            </a>
+        </div>
+    </div>
     <script type="module" src="./main.ts"></script>
-  </body>
+</body>
+
 </html>
