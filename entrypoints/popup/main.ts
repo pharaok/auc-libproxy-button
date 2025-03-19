@@ -19,10 +19,10 @@ const SI_ICONS = {
     const htmlIcon = icon as HTMLElement;
     const iconData = SI_ICONS[htmlIcon.dataset.si as keyof typeof SI_ICONS];
     htmlIcon.innerHTML = `
-    <svg fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <path d="${iconData.path}" />
-    </svg>
-  `;
+      <svg fill="currentColor" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="${iconData.path}" />
+      </svg>
+    `;
     iconData.svg;
   });
 
