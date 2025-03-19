@@ -1,3 +1,7 @@
+import { getLibProxyService } from "@/utils/service";
+
+const libProxyService = getLibProxyService();
+
 export default defineContentScript({
   matches: ["<all_urls>"],
   async main() {
@@ -7,22 +11,18 @@ export default defineContentScript({
     const path = match[2];
     let URLs: string[] = [];
 
-    await browser.runtime
-      .sendMessage({ action: "fetchAZList" })
-      .then((response) => {
-        const div = document.createElement("div");
-        div.innerHTML = response.data.data.html;
-        div.querySelectorAll("a").forEach((a) => {
-          const proxyRegex =
-            /^https:\/\/libproxy.aucegypt.edu\/login\?url=https?:\/\/(.*?)\/?$/;
-          const match = a.href.match(proxyRegex);
-          if (match) URLs.push(match[1]);
-        });
-      });
+    const azList = await libProxyService.fetchAZList();
+    const div = document.createElement("div");
+    div.innerHTML = azList.data.html;
+    div.querySelectorAll("a").forEach((a) => {
+      const proxyRegex =
+        /^https:\/\/libproxy.aucegypt.edu\/login\?url=https?:\/\/(.*?)\/?$/;
+      const match = a.href.match(proxyRegex);
+      if (match) URLs.push(match[1]);
+    });
     if (URLs.some((u) => (domain + path).startsWith(u))) {
       const a = document.createElement("a");
       setupLibProxyButton(a, toLibProxyUrl(window.location.href));
-      console.log(a);
       document.body.appendChild(a);
     }
   },

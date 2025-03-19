@@ -11,7 +11,6 @@ const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.33 70.
 </svg>`;
 
 export function setupLibProxyButton(element: HTMLAnchorElement, href: string) {
-  console.log(element, href);
   element.innerHTML = LOGO_SVG;
   element.classList.add("libproxy-button");
   element.href = href;

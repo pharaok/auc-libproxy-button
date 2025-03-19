@@ -5,7 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   extensionApi: "chrome",
   manifest: {
-    permissions: ["tabs"],
+    permissions: ["tabs", "storage"],
     host_permissions: ["https://libguides.aucegypt.edu/process/az/dblist"],
   },
   vite: () => ({
