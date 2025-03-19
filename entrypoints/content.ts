@@ -16,7 +16,7 @@ export default defineContentScript({
     div.innerHTML = azList.data.html;
     div.querySelectorAll("a").forEach((a) => {
       const proxyRegex =
-        /^https:\/\/libproxy.aucegypt.edu\/login\?url=https?:\/\/(.*?)\/?$/;
+        /^https:\/\/libproxy.aucegypt.edu\/login\?url=https?:\/\/(.*?)\//;
       const match = a.href.match(proxyRegex);
       if (match) URLs.push(match[1]);
     });
