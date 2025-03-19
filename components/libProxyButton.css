@@ -1,0 +1,44 @@
+.libproxy-button {
+  --green: #72bf44;
+
+  position: fixed;
+  top: 50%;
+  right: 0;
+  width: 48px;
+  height: 48px;
+  padding: 4px;
+  padding-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-top-left-radius: 9999px;
+  border-bottom-left-radius: 9999px;
+  background-color: white;
+  fill: var(--green);
+  border: 3px solid var(--green);
+  border-right: none;
+
+  user-select: none;
+  outline: none !important;
+
+  transition:
+    background-color 0.25s,
+    fill 0.25s;
+  animation: slideInFromRight 0.25s;
+}
+
+.libproxy-button:hover {
+  background-color: var(--green);
+  fill: white;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    right: -48px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
