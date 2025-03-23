@@ -1,7 +1,7 @@
-import "./style.css";
+import "shared/style.css";
 import { createIcons, Mail } from "lucide";
 import { siGithub, siOpenaccess } from "simple-icons";
-import { toLibProxyUrl } from "@/utils/toLibProxyUrl";
+import { toLibProxyUrl } from "shared/utils/toLibProxyUrl.js";
 
 createIcons({ icons: { Mail } });
 

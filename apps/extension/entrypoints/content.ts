@@ -1,3 +1,4 @@
+import { toLibProxyUrl } from "shared/utils/toLibProxyUrl.js";
 import { getLibProxyService } from "@/utils/service";
 
 const libProxyService = getLibProxyService();
