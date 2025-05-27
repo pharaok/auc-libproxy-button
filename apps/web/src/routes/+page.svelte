@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Button from '$lib/components/Button.svelte';
+	import A from '$lib/components/Anchor.svelte';
 	import { siGithub, siOpenaccess, siFirefox, siGooglechrome } from 'simple-icons';
 	import { Heart, Mail } from 'lucide-svelte';
 </script>
@@ -17,18 +17,26 @@
 			<h1 class="text-4xl">AUC LibProxy Redirect</h1>
 			<p class="text-xl">Reach full-text versions of articles with ease.</p>
 			<div class="mt-4 flex justify-center gap-4">
-				<Button class="flex items-center gap-2" onPress={() => console.log('Hey')}>
+				<A
+					class="flex items-center gap-2"
+					href="/extension/firefox-mv2-1.0.2.xpi"
+					download="auc-libproxy"
+				>
 					Add to Firefox
 					<svg class="size-8" viewBox="0 0 24 24">
 						<path class="fill-current" d={siFirefox.path} />
 					</svg>
-				</Button>
-				<Button class="flex items-center gap-2" onPress={() => console.log('Hey')}>
+				</A>
+				<A
+					class="flex items-center gap-2"
+					href="/extension/chrome-mv3-1.0.2.crx"
+					download="auc-libproxy"
+				>
 					Add to Chrome
 					<svg class="size-8" viewBox="0 0 24 24">
 						<path class="fill-current" d={siGooglechrome.path} />
 					</svg>
-				</Button>
+				</A>
 			</div>
 		</div>
 	</div>

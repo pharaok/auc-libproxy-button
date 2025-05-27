@@ -13,11 +13,12 @@ export default defineConfig({
       content_security_policy: {
         extension_pages:
           "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'; style-src 'self' 'unsafe-inline';",
-        sandbox: "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'",
+        // sandbox: "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'",
       },
       browser_specific_settings: {
         gecko: {
-          id: "{65402aac-3690-4286-9b32-5e5b6412055d}",
+          id: "{9bb6a393-44e6-4795-a43e-4e919424c53f}",
+          update_url: "https://auc-libproxy.pharaok.com/firefox-updates.json",
         },
       },
     };
