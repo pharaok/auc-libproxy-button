@@ -1,5 +1,6 @@
 import { toLibProxyUrl } from "shared/utils/toLibProxyUrl.js";
 import { getLibProxyService } from "@/utils/service";
+import buttonCss from "@/components/libProxyButton.css?raw";
 
 const libProxyService = getLibProxyService();
 
@@ -22,9 +23,18 @@ export default defineContentScript({
       if (match) URLs.push(match[1]);
     });
     if (URLs.some((u) => (domain + path).startsWith(u))) {
+      const shadowHost = document.createElement("div");
+      const shadowRoot = shadowHost.attachShadow({ mode: "open" });
+
+      const style = document.createElement("style");
+      style.textContent = buttonCss;
+      shadowRoot.appendChild(style);
+
       const a = document.createElement("a");
       setupLibProxyButton(a, toLibProxyUrl(window.location.href));
-      document.body.appendChild(a);
+      shadowRoot.appendChild(a);
+
+      document.body.appendChild(shadowHost);
     }
   },
 });

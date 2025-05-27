@@ -1,5 +1,6 @@
 .libproxy-button {
   --green: #72bf44;
+  box-sizing: border-box;
 
   position: fixed;
   z-index: 9999;

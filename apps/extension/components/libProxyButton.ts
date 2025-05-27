@@ -1,5 +1,3 @@
-import "./libProxyButton.css";
-
 const LOGO_SVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.33 70.76">
   <g transform="translate(0 -3.35)">
     <path d="M22.23 8v2.58l6.02 1.96v-2.21H48.9V23.4l4.86 6.69a.64.64 0 0 0 1.17-.37V3.35H19.67a.64.64 0 0 0-.45 1.1l2.64 2.64c.24.24.38.56.38.9m6.01 32.6V24.9c0-.56-.36-1.05-.89-1.22l-5.13-1.67V37.7c0 .56.36 1.05.9 1.22z"/>
