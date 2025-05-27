@@ -56,9 +56,15 @@ importers:
 
   apps/web:
     dependencies:
+      lucide-svelte:
+        specifier: ^0.484.0
+        version: 0.484.0(svelte@5.25.3)
       shared:
         specifier: workspace:^
         version: link:../shared
+      tailwind-merge:
+        specifier: ^3.0.2
+        version: 3.0.2
     devDependencies:
       '@eslint/compat':
         specifier: ^1.2.5
@@ -100,7 +106,7 @@ importers:
         specifier: ^0.6.11
         version: 0.6.11(prettier-plugin-svelte@3.3.3(prettier@3.5.3))(prettier@3.5.3)
       svelte:
-        specifier: ^5.0.0
+        specifier: ^5.25.3
         version: 5.25.3
       svelte-check:
         specifier: ^4.0.0
@@ -1915,6 +1921,11 @@ packages:
     resolution: {integrity: sha512-ozCC6gdQ+glXOQsveKD0YsDy8DSQFjDTz4zyzEHNV5+JP5D62LmfDZ6o1cycFx9ouG940M5dE8C8CTewdj2YWQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
 
+  lucide-svelte@0.484.0:
+    resolution: {integrity: sha512-QCPrcz+fqWP3jKtcWrzPemI1vcb/IgHNrwMbgm2YHgkmYH1V4L8wxGeEP3EGrLpC0Kiv4W0vN/haHLksg5bW7A==}
+    peerDependencies:
+      svelte: ^3 || ^4 || ^5.0.0-next.42
+
   lucide@0.483.0:
     resolution: {integrity: sha512-qccwC6H5QACYO6MMKnMJ5vg7ecGiWSrpgHrQFOdp/n+AnhndQjq0vTBsMX2KfXeMLSLbeFDa+6QtVhx3kS3RlQ==}
 
@@ -2645,6 +2656,9 @@ packages:
   svelte@5.25.3:
     resolution: {integrity: sha512-J9rcZ/xVJonAoESqVGHHZhrNdVbrCfkdB41BP6eiwHMoFShD9it3yZXApVYMHdGfCshBsZCKsajwJeBbS/M1zg==}
     engines: {node: '>=18'}
+
+  tailwind-merge@3.0.2:
+    resolution: {integrity: sha512-l7z+OYZ7mu3DTqrL88RiKrKIqO3NcpEO8V/Od04bNpvk0kiIFndGEoqfuzvj4yuhRkHKjRkII2z+KS2HfPcSxw==}
 
   tailwindcss@4.0.14:
     resolution: {integrity: sha512-92YT2dpt671tFiHH/e1ok9D987N9fHD5VWoly1CdPD/Cd1HMglvZwP3nx2yTj2lbXDAHt8QssZkxTLCCTNL+xw==}
@@ -4642,6 +4656,10 @@ snapshots:
 
   lowercase-keys@3.0.0: {}
 
+  lucide-svelte@0.484.0(svelte@5.25.3):
+    dependencies:
+      svelte: 5.25.3
+
   lucide@0.483.0: {}
 
   magic-string@0.30.17:
@@ -5357,6 +5375,8 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.17
       zimmerframe: 1.1.2
+
+  tailwind-merge@3.0.2: {}
 
   tailwindcss@4.0.14: {}
 
