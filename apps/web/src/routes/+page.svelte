@@ -1,5 +1,5 @@
 <script lang="ts">
-	import A from '$lib/components/Anchor.svelte';
+	import Link from '$lib/components/Link.svelte';
 	import { siGithub, siOpenaccess, siFirefox, siGooglechrome } from 'simple-icons';
 	import { Heart, Mail } from 'lucide-svelte';
 </script>
@@ -14,20 +14,16 @@
 			<path d={siOpenaccess.path} />
 		</svg>
 		<div class="flex flex-col items-center gap-2 md:items-start">
-			<h1 class="text-4xl">AUC LibProxy Redirect</h1>
+			<h1 class="text-4xl">AUC LibProxy Button</h1>
 			<p class="text-xl">Reach full-text versions of articles with ease.</p>
 			<div class="mt-4 flex justify-center gap-4">
-				<A
-					class="flex items-center gap-2"
-					href="/extension/firefox-mv2-1.0.2.xpi"
-					download="auc-libproxy"
-				>
+				<Link class="flex items-center gap-2" href="/extension/firefox-mv2-1.0.2.xpi">
 					Add to Firefox
 					<svg class="size-8" viewBox="0 0 24 24">
 						<path class="fill-current" d={siFirefox.path} />
 					</svg>
-				</A>
-				<A
+				</Link>
+				<Link
 					class="flex items-center gap-2"
 					href="/extension/chrome-mv3-1.0.2.crx"
 					download="auc-libproxy"
@@ -36,7 +32,7 @@
 					<svg class="size-8" viewBox="0 0 24 24">
 						<path class="fill-current" d={siGooglechrome.path} />
 					</svg>
-				</A>
+				</Link>
 			</div>
 		</div>
 	</div>

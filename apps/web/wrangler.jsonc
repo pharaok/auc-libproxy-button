@@ -19,6 +19,12 @@
 			"pattern": "auc-libproxy.pharaok.com",
 			"custom_domain": true
 		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "KV_BINDING",
+			"id": "af260fa69fd249cbb7394afa7c86c860"
+		}
 	]
 	/**
 	 * Smart Placement

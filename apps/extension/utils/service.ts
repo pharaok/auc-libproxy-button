@@ -26,6 +26,32 @@ class LibProxyService {
 
     return azList;
   }
+
+  async fetchWhitelist(): Promise<string[]> {
+    const lastFetched = await storage
+      .getMeta<{ lastFetched: number }>("local:whitelist")
+      .then((meta) => meta.lastFetched);
+    if (
+      lastFetched &&
+      new Date().getTime() - lastFetched < 1000 * 60 * 60 * 24
+    ) {
+      const whitelist = (await storage.getItem("local:whitelist")) as string[];
+      return whitelist;
+    }
+
+    const whitelist = fetch("https://auc-libproxy.pharaok.com/api/kv/whitelist")
+      .then((response) => response.json())
+      .then(async (data) => {
+        await storage.setItem("local:whitelist", data);
+        await storage.setMeta("local:whitelist", {
+          lastFetched: Date.now(),
+        });
+        return data;
+      })
+      .catch((error) => console.error("Error fetching whitelist", error));
+
+    return whitelist;
+  }
 }
 
 export const [registerLibProxyService, getLibProxyService] = defineProxyService(

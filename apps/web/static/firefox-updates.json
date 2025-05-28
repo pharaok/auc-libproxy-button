@@ -1,10 +1,14 @@
 {
 	"addons": {
-		"{65402aac-3690-4286-9b32-5e5b6412055d}": {
+		"{9bb6a393-44e6-4795-a43e-4e919424c53f}": {
 			"updates": [
 				{
 					"version": "1.0.2",
 					"update_link": "https://auc-libproxy.pharaok.com/firefox-mv2-1.0.2.xpi"
+				},
+				{
+					"version": "1.0.3",
+					"update_link": "https://auc-libproxy.pharaok.com/firefox-mv2-1.0.3.xpi"
 				}
 			]
 		}
