@@ -1,6 +1,12 @@
 <script lang="ts">
 	import { twMerge } from 'tailwind-merge';
-	const props: { class: string; href: string; download: string; children: ChildNode } = $props();
+	const props: {
+		class: string;
+		href: string;
+		download: string;
+		target: string;
+		children: ChildNode;
+	} = $props();
 </script>
 
 <a
@@ -10,6 +16,7 @@
 	)}
 	href={props.href}
 	download={props.download}
+	target={props.target}
 >
 	{@render props.children()}
 </a>

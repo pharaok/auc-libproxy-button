@@ -17,7 +17,7 @@
 			<h1 class="text-4xl">AUC LibProxy Button</h1>
 			<p class="text-xl">Reach full-text versions of articles with ease.</p>
 			<div class="mt-4 flex justify-center gap-4">
-				<Link class="flex items-center gap-2" href="/extension/firefox-mv2-1.0.2.xpi">
+				<Link class="flex items-center gap-2" href="/extension/firefox-mv2-1.0.3.xpi">
 					Add to Firefox
 					<svg class="size-8" viewBox="0 0 24 24">
 						<path class="fill-current" d={siFirefox.path} />
@@ -25,8 +25,8 @@
 				</Link>
 				<Link
 					class="flex items-center gap-2"
-					href="/extension/chrome-mv3-1.0.2.crx"
-					download="auc-libproxy"
+					href="https://chromewebstore.google.com/detail/auc-library-proxy-button/odafhijaolaiadggckheokhhbpnacbcc"
+					target="_blank"
 				>
 					Add to Chrome
 					<svg class="size-8" viewBox="0 0 24 24">
